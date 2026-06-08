@@ -17,7 +17,6 @@ int findelement( int x ){
 
 }
 
-
 return -1;
 
 }

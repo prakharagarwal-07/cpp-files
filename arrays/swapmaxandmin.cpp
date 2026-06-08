@@ -33,17 +33,13 @@ int maximum( int array[] , int size ){
 
     }
     return largestindex;
-
-
 }
 
 void swapMinMax( int array[] , int size ){
 
     swap( array[ minimum( array , size )] , array[maximum( array , size )] );
+
 }
-
-
-
 int main(){
     
 
@@ -53,24 +49,11 @@ int main(){
 
     int i;
 
-
-
-
-
-    swapMinMax( array , size );
+ swapMinMax( array , size );
 
     for( i = 0 ; i < size ; i++){
 
         cout << array[i] << " ";
     }
-
-
-
-    
-
-
-
-
-
 }
 

@@ -34,7 +34,7 @@ int main(){
 
     for (  i = 0 ; i < size ; i++ ){
 
-        cin >> array[i];
+        cin >> array[i] ;
 
     }
 

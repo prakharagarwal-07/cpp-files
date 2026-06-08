@@ -9,7 +9,7 @@ int main(){
     int start;
     int end;
 
-    int maxSum = INT_MIN;
+    int maxSum = INT_MIN; 
 
     for(start = 0 ; start < size ; start++ ){
         int currentSum = 0;

@@ -30,7 +30,7 @@ int majority(vector<int> nums){
 
 int main(){
 
-    vector<int> nums = { 1, 1, 1, 1, 3, 4, 5, 2, 2, 2, 2, 2};
+    vector<int> nums = { 1, 1, 1, 1, 3, 4, 5, 2, 2, 2, 2, 2}; //max freq of 2 i.e 5times
 
     cout << majority(nums);
 
