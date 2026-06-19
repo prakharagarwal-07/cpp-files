@@ -19,9 +19,10 @@ void sort(vector<int> &array ){
 
                 smallestindex = j;
             }
-        }
+        } 
 
-          swap(array[j] , array[smallestindex]);
+          swap(array[i] , array[smallestindex]);
+          
 
     }
 
