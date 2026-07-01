@@ -26,7 +26,7 @@ int main(){
 
 
 
-        priority_queue<int , vector<int> , greater<int>> qt;
+        priority_queue<int , vector<int> , greater<int>> qt;  //greater<int> is a functor
 
     qt.push(1);
     qt.push(5);
