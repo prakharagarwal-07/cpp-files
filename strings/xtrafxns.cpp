@@ -11,5 +11,9 @@ int main(){
 
     cout << c << endl;
 
+    char x = '#';
+
+    cout << isalnum(x);
+
 
 }
