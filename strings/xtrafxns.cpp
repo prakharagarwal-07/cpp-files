@@ -17,4 +17,13 @@ int main(){
     cout << isalnum(x);  //checks if the given char is alpha numeric or not
 
 
+    string s = "ddrrttabcffttyy";
+
+    cout << s.find("abc") <<endl;  //returns the index of first char of string
+
+    s.erase( s.find("abc") , 3 );
+
+    cout << s << endl;
+
+
 }
