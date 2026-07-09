@@ -38,7 +38,7 @@ void sort(vector<int> &nums){
 
     }
 
-    int print( vector<int> &nums){
+    void print( vector<int> &nums){
 
         int i;
 
@@ -46,6 +46,8 @@ void sort(vector<int> &nums){
 
             cout << nums[i] << " ";
         }
+
+
     }
 
 
@@ -56,6 +58,7 @@ int main(){
 
     sort(nums);
     print(nums);
+
 
 
 }
