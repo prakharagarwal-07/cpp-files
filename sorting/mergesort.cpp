@@ -1,5 +1,6 @@
 #include <iostream>
-#include <vector>
+#include <vector>                  //time comp --> nlogn
+                                   //space comp ---> n           // divide and conquer
 using namespace std;
 
 void merge( vector<int> &nums , int start , int mid , int end ){
