@@ -5,14 +5,14 @@ using namespace std;
 class Account{
 private:
 
-    double balance = 10;
+    double balance = 10;          //hiding the data
     string password;
 
 public:
 
     void deposit(double amt){
 
-        balance += amt;
+        balance += amt;                       //limited access using member functions
     }
 
     double getBalance(){

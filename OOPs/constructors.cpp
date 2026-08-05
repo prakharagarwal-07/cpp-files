@@ -23,10 +23,10 @@ string subject;
     }
 
     //parameterised constructor
-    Teacher( string gen , string sub ){
+    Teacher( string gender , string subject ){
 
-        gender = gen;
-        subject = sub;
+        this->gender = gender;                          //// this pointer tell the comiler the this-> gender is the property of object and not
+        this->subject = subject;                             //and not the parameter defined inside cons. . we can also write *(this).subject
     }
 
 
@@ -35,8 +35,8 @@ string subject;
 
 int main(){
 
-    Teacher t1;
-    Teacher t2( "male" , "maths" );
+    Teacher t1;                             //non para cons called
+    Teacher t2( "male" , "maths" );        //para cons called 
 
 
     cout << t2.gender << endl;

@@ -3,9 +3,9 @@
 using namespace std;
 
 class Teacher{
-private:
+private:                
 
-double salary;
+double salary;                 //put salary inside private so that no one can directly access salary outside this class
 
 public:
 
