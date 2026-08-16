@@ -93,6 +93,9 @@ public:
 
     void pop_front(){
 
+                    Node* temp = head;
+
+
         if( head == NULL ){
 
             return;
@@ -103,11 +106,11 @@ public:
         if( head->next == NULL ){
 
             head = tail = NULL;
+            delete temp;
         }
 
         else{
 
-            Node* temp = head;
 
             head = head->next;
 
@@ -118,6 +121,8 @@ public:
     }
 
     void pop_back(){
+                Node* temp = tail;
+
 
         if( tail == NULL ){
 
@@ -128,13 +133,17 @@ public:
         if( tail->prev == NULL ){
 
             tail = head = NULL;
+            delete temp;
 
         }
 
-        Node* temp = tail;
+        else{
+
         tail = tail->prev;
         tail->next = NULL;
         delete temp;
+
+        }
 
     
     }
