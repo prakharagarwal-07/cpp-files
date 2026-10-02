@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-vector<int> prevSmall( vector<int> nums ){
+vector<int> prevSmall( vector<int> &nums ){
 
     stack<int> s;
     vector<int> ans;
