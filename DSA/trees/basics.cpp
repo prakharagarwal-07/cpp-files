@@ -152,14 +152,58 @@ int idx = -1;
         }
     }
 
+    int height( Node* root ){
+
+        if( root == NULL ){
+
+            return 0;
+
+        }
+
+        int leftHt = height( root->left );
+        int rightHt = height( root->right );
+
+        return max( leftHt , rightHt )+1;
+    }
+
+    int countNodes( Node* root ){
+
+        if( root == NULL ){
+
+            return 0;
+        }
+
+        int leftNode = countNodes( root->left );
+        int rightNode = countNodes( root->right );
+
+        return leftNode + rightNode + 1;
+    }
+
+    int sumNodes( Node* root ){
+
+        if( root == NULL ){
+
+            return 0;
+        }
+
+        int leftSum = sumNodes( root->left );
+        int rightSum = sumNodes( root->right );
+
+        return leftSum + rightSum + root->val;
+    }
+
 
 int main(){
 
-    vector<int> preBuild = { 1 , 2 , -1 , -1  , 3 , 4 , -1 , -1 , 5 , -1 ,-1  };
+    vector<int> preBuild = { 1 , 2 , 8 , -1 , -1 , 3 , -1 , -1 , 4 , -1 , 5 , -1 ,-1  };
     
     Node* root = build( preBuild );
 
-    LevelOrder( root );
+    cout << height( root ) << endl;
+
+    cout << "number of nodes - " << countNodes( root ) << endl;
+
+    cout << sumNodes(root) << endl;
 
 
-}
+}   
