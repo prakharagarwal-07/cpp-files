@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <queue>
+#include <map>
 using namespace std;
 
 
@@ -193,6 +195,58 @@ int idx = -1;
     }
 
 
+
+
+
+    void topView( Node* root ){
+
+        queue<pair<Node* , int>> q;
+
+        map<int , int> m;
+
+        q.push( { root , 0 } );
+
+        int dist = 0;
+
+        while( !q.empty() ){
+
+            Node* curr = q.front().first;
+            int currDist = q.front().second;
+
+            if( m.find(currDist) == m.end() ){
+
+                m[currDist] = curr->val;
+
+            }
+
+            q.pop();
+
+
+             
+            if( curr->left != NULL ){
+
+                
+                q.push( { curr->left , currDist-1 } );
+            }
+
+            if( curr->right != NULL ){
+
+            
+                q.push( { curr->right , currDist+1 } );
+            }
+        }
+
+        for( auto x: m ){
+
+            cout << x.second << " ";
+        }
+
+
+
+
+    }
+
+
 int main(){
 
     vector<int> preBuild = { 1 , 2 , 8 , -1 , -1 , 3 , -1 , -1 , 4 , -1 , 5 , -1 ,-1  };
@@ -204,6 +258,8 @@ int main(){
     cout << "number of nodes - " << countNodes( root ) << endl;
 
     cout << sumNodes(root) << endl;
+
+    topView( root );
 
 
 }   
